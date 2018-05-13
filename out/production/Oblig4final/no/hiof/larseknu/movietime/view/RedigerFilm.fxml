@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.hiof.larseknu.movietime.controller.RedigerFilmController">
+    <children>
+        <GridPane layoutX="92.0" layoutY="58.0" prefHeight="258.0" prefWidth="417.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="97.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.0" minWidth="10.0" prefWidth="320.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="163.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="62.0" minHeight="8.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Tittel:" />
+                <Label text="Beskrivelse:" GridPane.rowIndex="1" />
+                <Label text="Utgivelsesdato:" GridPane.rowIndex="2" />
+                <Label text="Spilletid" GridPane.rowIndex="3" />
+                <TextField fx:id="Texttittel" GridPane.columnIndex="1" />
+                <TextArea fx:id="Textbeskrivelse" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="Textspilletid" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <DatePicker fx:id="Textdato" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <Button fx:id="addBtn" defaultButton="true" layoutX="459.0" layoutY="355.0" mnemonicParsing="false" onAction="#redigerFilm" prefHeight="25.0" prefWidth="50.0" text="OK" />
+      <Label layoutX="196.0" layoutY="2.0" text="Rediger film">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
